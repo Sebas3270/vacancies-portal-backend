@@ -1,0 +1,24 @@
+
+# Custom settings
+/local_settings.py
+
+# Virtual env
+env/
+backend/.env
+
+# Dependencies files
+*.pyc
+*.pyo
+__pycache__
+*.egg-info/
+dist/
+build/
+
+# Generated code by development tools
+.vscode/
+
+# Cache files
+logs/
+cache/
+
+Este archivo .gitignore excluye los archivos y directorios generados por Django, como los archivos de caché, registros, la base de datos SQLite, archivos .pyc, así como archivos específicos de configuración local, como local_settings.py. Asegúrate de adaptar este archivo según tus necesidades específicas, especialmente si estás utilizando otros servicios o herramientas en tu proyecto Django. Además, si utilizas otras bases de datos en lugar de SQLite, asegúrate de agregar sus archivos de exclusión correspondientes.
