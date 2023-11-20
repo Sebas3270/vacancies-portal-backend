@@ -25,7 +25,7 @@ def get_all_vacancies(request):
     vacancies_qs = paginator.paginate_queryset(vacancies_fs.qs, request)
 
     vacancies_serialized = VacancySerializer(vacancies_qs, many=True)
-    return Response({"resPerPage": resPerPage, "count": count, "vacancies":vacancies_serialized.data})
+    return Response({"resPerPage": resPerPage, "totalPages": paginator.page.paginator.num_pages, "count": count, "vacancies":vacancies_serialized.data})
 
 @api_view(['GET'])
 def get_one_vacancy(request, id):
